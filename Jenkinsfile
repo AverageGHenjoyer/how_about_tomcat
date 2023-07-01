@@ -1,13 +1,9 @@
 pipeline{
     agent any
     stages {
-        stage('Build Application'){
+        stage('Archive the artifacts'){
             steps{
-                sh 'mvn clean package'
-            }
-            post { 
-                success {
-                    echo "Now archiving the Artifacts..."
+                    echo "Archiving the Artifacts..."
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
