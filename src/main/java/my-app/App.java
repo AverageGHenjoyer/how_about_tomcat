@@ -1,4 +1,3 @@
-package my-app;
 
 /**
  * Hello world!
